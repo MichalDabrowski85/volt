@@ -1,0 +1,17 @@
+{
+    "name": "michal/volt",
+    "require": {
+        "symfony/test-pack": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Michal\\Volt\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MichalDabrowski85",
+            "email": "michal_85@onet.eu"
+        }
+    ]
+}
