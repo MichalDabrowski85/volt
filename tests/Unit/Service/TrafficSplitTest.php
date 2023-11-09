@@ -62,15 +62,15 @@ class TrafficSplitTest extends TestCase
         ],), [100, 1000], 6];
 
         $gateway1 = $this->createMock(GateWay\Gateway1::class);
-        $gateway1->method('getTrafficLoad')->willReturn(50);
+        $gateway1->method('getTrafficLoad')->willReturn(75);
         $gateway1->method('getName')->willReturn('Gateway1');
 
         $gateway2 = $this->createMock(GateWay\Gateway2::class);
-        $gateway2->method('getTrafficLoad')->willReturn(50);
+        $gateway2->method('getTrafficLoad')->willReturn(10);
         $gateway2->method('getName')->willReturn('Gateway2');
 
         $gateway3 = $this->createMock(GateWay\Gateway3::class);
-        $gateway3->method('getTrafficLoad')->willReturn(50);
+        $gateway3->method('getTrafficLoad')->willReturn(15);
         $gateway3->method('getName')->willReturn('Gateway3');
 
         yield 'gateways 75,10,15' => [new TrafficSplit([
