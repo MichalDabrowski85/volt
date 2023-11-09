@@ -7,6 +7,7 @@ use GatewayApi1;
 
 class Gateway1 extends BaseGateway
 {
+    protected int $weight = 25;
 
     public function __construct(private GatewayApi1 $api)
     {
@@ -19,7 +20,7 @@ class Gateway1 extends BaseGateway
 
     public function getTrafficLoad(): int
     {
-       return $this->api->getTrafficLoad();
+        return $this->api->getTrafficLoad();
     }
 
     public function getName(): string
